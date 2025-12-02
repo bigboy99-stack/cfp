@@ -38,11 +38,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Create dist directory
-        run: mkdir -p dist
-
       - name: Build (Minify)
-        run: npm run minify:all
+        run: npm run build
 
       - name: Upload minified assets
         uses: actions/upload-artifact@v4

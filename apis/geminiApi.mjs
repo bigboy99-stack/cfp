@@ -58,4 +58,4 @@ app.post('/gem', async (req, res) => {
   }
 });
 
-app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
+app.listen(port, () => console.log(`Server running on https://ai.helldogg42.workers.dev/gem`));

@@ -6,7 +6,7 @@
   "scripts": {
     "minify:js": "for %f in (src\\*.js) do (terser \"%f\" -o \"dist/%~nf.js\" -c -m)",
     "minify:css": "for %f in (src\\*.css) do (postcss -o \"dist/%~nf.css\" \"%f\")",
-    "minify:html": "for %f in (src\\index.html) do (html-minifier-terser --collapse-whitespace --remove-comments \"%f\" -o \"dist/%~nf.html\")",
+    "minify:html": "for %f in (src\\*.html) do (html-minifier-terser --collapse-whitespace --remove-comments \"%f\" -o \"dist/%~nf.html\")",
     "build": "npm run minify:js & npm run minify:css & npm run minify:html"
   },
   "keywords": [],

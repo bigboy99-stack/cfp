@@ -1,6 +1,7 @@
 node_modules
 .env
-Websites
-blogsTalks
-src
 webpack.config.js
+wrangler.toml
+forjobs
+aiwebsites
+accessibleWebsites

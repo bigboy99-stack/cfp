@@ -1,28 +1,50 @@
 document.body.onload = initializeTheme;
 setTimeout(()=>pd2.focus(), 200);
+const ld = document.querySelector(".lb");
 const ht = document.querySelector("html");
 const sb = document.querySelector(".sb");
 const sv = document.querySelector(".sbs");
 const hb = document.querySelector("#sb-btn");
 const prj = document.querySelector(".prj");
 const pd2 = document.querySelector(".pd2");
-const ema = document.querySelector("#ema");
-const cs = document.querySelector("#cs");
 // const yt = document.querySelector(".ytd");
 // const vi = document.querySelector(".vi");
 
+ld.onclick = two;
 hb.onclick = () => {toggleDropdown(hb, sb, "sbb");};
 pd2.onclick = () => {toggleDropdown(pd2, prj, "uls");};
 
-function initializeTheme () {
- if (localStorage.getItem("dark") === "on") {ht.setAttribute('data-theme', 'dark'); ht.className = 'bd'}
- else {ht.removeAttribute('data-theme'); ht.className = 'bl'}
+function initializeTheme() {
+  if (localStorage.getItem("dark") === "on") {
+  const isChecked = ld.getAttribute("aria-checked") === "true";
+    if (!isChecked) {
+      ld.setAttribute("aria-checked", "true");
+      ht.setAttribute('data-theme', 'dark');
+      ld.textContent = "light ☀️";
+      ht.className = 'bd'
+    }
+  } else {
+    ld.setAttribute("aria-checked", "false");
+    ht.removeAttribute('data-theme')
+    ld.textContent = "dark 🌙";
+    ht.className = 'bl'
+  }
 }
-ema.onclick = () => {
-  ema.select();
-  ema.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(ema.value);
-  alert("Copied the text: " + ema.value);
+function two () {
+  const isChecked = ld.getAttribute("aria-checked") === "true";
+  if (!isChecked) {
+    localStorage.setItem("dark", "on");
+    ld.setAttribute("aria-checked", "true");
+    ht.setAttribute('data-theme', 'dark');
+    ld.textContent = "light ☀️";
+    ht.className = 'bd'
+  } else {
+    localStorage.setItem("dark", "off");
+    ld.setAttribute("aria-checked", "false");
+    ht.removeAttribute('data-theme')
+    ld.textContent = "dark 🌙";
+    ht.className = 'bl'
+  }
 }
 function toggleDropdown(button, targetElement, activeClass) {
   const isExpanded = button.getAttribute("aria-expanded") === "true";

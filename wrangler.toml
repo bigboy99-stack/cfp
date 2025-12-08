@@ -1,4 +1,4 @@
-name = "worker-js"
+name = "cfp"
 account_id = "db6c4c6879c872694350fefa5b59091a"
 workers_dev = true
 compatibility_date = "2025-12-08"

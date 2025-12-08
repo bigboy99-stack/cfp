@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "minify:js": "for %f in (src\\*.js) do (terser \"%f\" -o \"dist/%~nf.js\" -c -m)",
-    "minify:css": "for %f in (src\\*.css) do (postcss -o \"dist/%~nf.css\" \"%f\")",
-    "minify:html": "for %f in (src\\*.html) do (html-minifier-terser --collapse-whitespace --remove-comments \"%f\" -o \"dist/%~nf.html\")",
+    "minify:js": "for f in src/*.js; do terser \"$f\" -o \"dist/$(basename \"$f\" .js).js\" -c -m done",
+    "minify:css": "for f in src/*.css; do postcss -o \"dist/$(basename \"$f\" .css).css\" \"$f\"; done",
+    "minify:html": "for f in src/*.html; do html-minifier-terser --collapse-whitespace --remove-comments \"$f\" -o \"dist/$(basename \"$f\" .html).html\"; done",
     "build": "npm run minify:js & npm run minify:css & npm run minify:html"
   },
   "keywords": [],
@@ -33,14 +33,5 @@
     "postcss-cli": "^11.0.1",
     "terser": "^5.44.1",
     "vite": "^7.1.12"
-  },
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bigboy99-stack/webdev.git"
-  },
-  "bugs": {
-    "url": "https://github.com/bigboy99-stack/webdev/issues"
-  },
-  "homepage": "https://github.com/bigboy99-stack/webdev#readme"
+  }
 }

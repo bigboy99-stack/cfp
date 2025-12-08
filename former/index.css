@@ -10,7 +10,7 @@
   --dg: oklch(59.175% 0.20134 142.511);
   --al: oklch(98.987% 0.01067 204.685);
   --ad: oklch(23.345% 0.04884 233.963);
-  --hb: oklch(59.667% 0.22126 258.047);
+  --hb: oklch(59.667% 0.22126 258.047);MAX
   --b1: oklch(56.239% 0.24047 264.42);
   --tb: oklch(37.001% 0.1717 262.218);
   --anim: background-color 0.2s ease-in-out 0.1s;
@@ -72,7 +72,7 @@ a:hover:not(.li a, .bread a) {text-decoration: underline;font-size: 109%;transit
 h3 {margin-block: 2px 8px;color: var(--ad);}
 .h3 {color: var(--l);}
 .serv {margin-block: 32px 48px;}
-.ul {padding: 1px;margin: 1px auto;list-style: none;display: flex;justify-items: center;gap: 16px;flex-wrap: wrap;}
+.ul {padding: 1px;margin: 1px auto;list-style: none;display: flex;justify-items: center;gap: 16px;}
 .li {color: var(--d);background-color: var(--tb);padding: 12px;border-radius: 16px;min-height: 50px;flex-grow: 1;box-shadow: -4px 8px 7px #25252570;border: 1px solid #26262639;}
 .li:hover {transform: translateY(-4px);box-shadow: none;}
 .li > a p {margin: 3px 0px 0px 0px;padding: 0px;color: #eaeaea;}

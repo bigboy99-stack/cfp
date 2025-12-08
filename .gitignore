@@ -1,3 +1,5 @@
 node_modules
 .env
 webpack.config.js
+wrangler.toml
+worker.js

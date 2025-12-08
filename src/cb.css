@@ -28,7 +28,7 @@
 .bl {background-color:var(--bl);transition: var(--anim)}
 .bd {background-color:var(--bd);transition: var(--anim)}
 
-.c {position: relative;margin-inline: auto;max-width: 1000px;width: 97%;}
+.c {position: relative;margin-inline: auto;max-width: 1000px;width: 96%;}
 .nd {display: flex;position: fixed;top: 14px;left: 50%;transform: translateX(-50%);-webkit-backdrop-filter: blur(4.5px);backdrop-filter: blur(4.5px);
  background: #ffffff5d;width: 99%;z-index: 20;border-radius: 16px;margin-inline: auto;font-family: "poppins", sans-serif;justify-content: space-between;
  max-width: 1230px;border: 2px solid #bababa33;letter-spacing: 0.1mm;min-height: 60px;}
@@ -40,7 +40,7 @@
 button {border: 1px solid #33333321;box-shadow: -2px 2px 4px #33333399;background: #ffffff76;border-radius: 6px;padding: 6px;min-height: 45px;align-content: center;}
 #sb-btn {min-height: 43px;margin-inline: 24px 22px;padding-block-end: 1px;}
 button:active, .sbs:active, a:active {transform: scale(0.94);}
-button:focus-visible, a:focus-visible, #cbi:focus-visible {outline: 2px solid oklch(56.239% 0.24047 264.42 / 0.477);;outline-offset: 3px;}
+button:focus-visible, a:focus-visible, #cbi:focus-visible {outline: 2px solid #2962ff7a;outline-offset: 3px;}
 button:focus, a:focus, #cbi:focus {font-size: 109%;transition: font-size 0.2s ease-out;}
 .prs {fill: var(--b1);margin: 2px 0px 0px 4px;}
 .prj {visibility: hidden;opacity: 0;transform: translateY(-10px);color: var(--d);position: absolute;top: 48px;left: -16px;transition: var(--uls);list-style-type: none;}

@@ -28,7 +28,7 @@
 .bl {background-color:var(--bl);transition: var(--anim)}
 .bd {background-color:var(--bd);transition: var(--anim)}
 
-.c {position: relative;margin-inline: auto;max-width: 1000px;width: 97%;}
+.c {position: relative;margin-inline: auto;max-width: 1000px;width: 96%;}
 .nd {display: flex;position: fixed;top: 14px;left: 50%;transform: translateX(-50%);-webkit-backdrop-filter: blur(4.5px);backdrop-filter: blur(4.5px);
  background: #ffffff5d;width: 99%;z-index: 20;border-radius: 16px;margin-inline: auto;font-family: "poppins", sans-serif;justify-content: space-between;
  max-width: 1230px;border: 2px solid #bababa33;letter-spacing: 0.1mm;min-height: 60px;}

@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "minify:js": "for %%f in (src\\*.js) do (terser \"%%f\" -o \"dist/%%~nf.js\" -c -m)",
-    "minify:css": "for %%f in (src\\*.css) do (postcss -o \"dist/%%~nf.css\" \"%%f\")",
-    "minify:html": "for %%f in (src\\*.html) do (html-minifier-terser --collapse-whitespace --remove-comments \"%%f\" -o \"dist/%%~nf.html\")",
+    "minify:js": "for f in src/*.js; do terser \"$f\" -o \"dist/$(basename \"$f\" .js).js\" -c -m done",
+    "minify:css": "for f in src/*.css; do postcss -o \"dist/$(basename \"$f\" .css).css\" \"$f\"; done",
+    "minify:html": "for f in src/*.html; do html-minifier-terser --collapse-whitespace --remove-comments \"$f\" -o \"dist/$(basename \"$f\" .html).html\"; done",
     "build": "npm run minify:js & npm run minify:css & npm run minify:html"
   },
   "keywords": [],

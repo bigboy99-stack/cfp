@@ -9,7 +9,7 @@ const port = 3004;
 
 // 1. Security & Parsing
 app.use(express.json());
-// app.use(express.urlencoded())
+app.use(express.urlencoded())
 app.use(helmet());
 app.use(cors()); 
 
@@ -18,11 +18,11 @@ const limiter = rateLimit({
   windowMs: 1 * 60 * 1000, max: 10,
   message: { error: "requests have exceeded more than 10 a minute or you have used the max token in a minute, please try again in a minute." }
 });
-app.use('/gem', limiter);
+app.use('/emb', limiter);
 
 const genAI = new GoogleGenAI({});
 
-app.post('/gem', async (req, res) => {
+app.post('/emb', async (req, res) => {
   try {
     const prompt = req.body.chatbot;
     
@@ -58,4 +58,4 @@ app.post('/gem', async (req, res) => {
   }
 });
 
-app.listen(port, () => console.log(`Server running on https://ai.helldogg42.workers.dev/gem`));
+app.listen(port, () => console.log(`Server running on port ${port}`));

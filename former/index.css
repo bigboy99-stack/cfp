@@ -10,7 +10,7 @@
   --dg: oklch(59.175% 0.20134 142.511);
   --al: oklch(98.987% 0.01067 204.685);
   --ad: oklch(23.345% 0.04884 233.963);
-  --hb: oklch(59.667% 0.22126 258.047);MAX
+  --hb: oklch(59.667% 0.22126 258.047);
   --b1: oklch(56.239% 0.24047 264.42);
   --tb: oklch(37.001% 0.1717 262.218);
   --anim: background-color 0.2s ease-in-out 0.1s;
@@ -28,7 +28,7 @@
 .bl {background-color:var(--bl);transition: var(--anim)}
 .bd {background-color:var(--bd);transition: var(--anim)}
 
-.c {position: relative;margin-inline: auto;max-width: 1000px;width: 97%;}
+.c {position: relative;margin-inline: auto;max-width: 1000px;width: 96%;}
 .nd {display: flex;position: fixed;top: 14px;left: 50%;transform: translateX(-50%);-webkit-backdrop-filter: blur(4.5px);backdrop-filter: blur(4.5px);
  background: #ffffff5d;width: 99%;z-index: 20;border-radius: 16px;margin-inline: auto;font-family: "poppins", sans-serif;justify-content: space-between;
  max-width: 1230px;border: 2px solid #bababa33;letter-spacing: 0.1mm;min-height: 60px;}
@@ -41,12 +41,12 @@ button {border: 1px solid #33333321;box-shadow: -2px 2px 4px #33333399;backgroun
 #sb-btn {min-height: 43px;margin-inline: 24px 22px;padding-block-end: 1px;}
 button:active, .sbs:active, a:active {transform: scale(0.94);}
 button:focus-visible, a:focus-visible {outline: 2px solid var(--b1);outline-offset: 3px;}
-button:focus, a:focus, .sbs:focus {font-size: 109%;transition: font-size 0.2s ease-out;}
+button:focus, a:focus, .sbs:focus, button:hover {font-size: 109%;transition: font-size 0.4s ease-in;cursor: pointer;border-radius: 4px;}
 .prs {fill: var(--b1);margin: 2px 0px 0px 4px;}
 .prj {visibility: hidden;opacity: 0;transform: translateY(-10px);color: var(--d);position: absolute;top: 48px;left: -16px;transition: var(--uls);list-style-type: none;}
 .uls {visibility: visible;font-weight: 600;opacity: 1;transform: translateY(0);transition: var(--uls);border: 2px solid #63636333;border-radius: 12px;padding: 8px;background: #ffffff;width: max-content;}
 a {text-decoration: none;display: inline-block;letter-spacing: 0.02rem;font-size: 1rem;color: inherit;align-items: center;font-weight: 600;}
-a:hover:not(.li a, .bread a) {text-decoration: underline;font-size: 109%;transition: font-size 0.2s ease-out;}
+a:hover:not(.li a, .bread a) {text-decoration: underline;font-size: 109%;transition: font-size 0.4s ease-in;}
 .ld {display: flex;align-items: center;}
 
 .sbs {width: 30px;height: 30px;fill: var(--d);margin: 0px;}

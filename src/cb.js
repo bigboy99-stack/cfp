@@ -1,7 +1,6 @@
+document.body.onload = setTimeout(initializeTheme, 200);
 let inp;
-// document.body.onload = ;
 document.body.onload = ()=> {
-  initializeTheme;
   inp = document.querySelector("#cbi");
   inp.focus();
   inp.oninput = (e) => {e.target.style.height = 'auto'; e.target.style.height = `${e.target.scrollHeight}px`}
@@ -42,9 +41,11 @@ function two () {
   }
 }
 
-function initializeTheme () {
- if (localStorage.getItem("dark") == "on") {console.log(345);ht.setAttribute('data-theme', 'dark'); ht.className = 'bd';ld.textContent = "light ☀️";ld.setAttribute("aria-checked", "true");}
- else {ht.removeAttribute('data-theme'); ht.className = 'bl';ld.textContent = "dark 🌙";ld.setAttribute("aria-checked", "false");}
+function initializeTheme() {
+    if (localStorage.getItem("dark") === "on") {
+      const isChecked = ld.getAttribute("aria-checked") === "true";
+      if (!isChecked) { ld.setAttribute("aria-checked", "true"); ht.setAttribute('data-theme', 'dark');ld.textContent = "light ☀️";ht.className = 'bd'}
+    } else {ld.setAttribute("aria-checked", "false");ht.removeAttribute('data-theme');ld.textContent = "dark 🌙";ht.className = 'bl'}
 }
 
 ema.onclick = () => {

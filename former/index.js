@@ -15,20 +15,10 @@ hb.onclick = () => {toggleDropdown(hb, sb, "sbb");};
 pd2.onclick = () => {toggleDropdown(pd2, prj, "uls");};
 
 function initializeTheme() {
-  if (localStorage.getItem("dark") === "on") {
-  const isChecked = ld.getAttribute("aria-checked") === "true";
-    if (!isChecked) {
-      ld.setAttribute("aria-checked", "true");
-      ht.setAttribute('data-theme', 'dark');
-      ld.textContent = "light ☀️";
-      ht.className = 'bd'
-    }
-  } else {
-    ld.setAttribute("aria-checked", "false");
-    ht.removeAttribute('data-theme')
-    ld.textContent = "dark 🌙";
-    ht.className = 'bl'
-  }
+    if (localStorage.getItem("dark") === "on") {
+      const isChecked = ld.getAttribute("aria-checked") === "true";
+      if (!isChecked) { ld.setAttribute("aria-checked", "true"); ht.setAttribute('data-theme', 'dark');ld.textContent = "light ☀️";ht.className = 'bd'}
+    } else {ld.setAttribute("aria-checked", "false");ht.removeAttribute('data-theme');ld.textContent = "dark 🌙";ht.className = 'bl'}
 }
 function two () {
   const isChecked = ld.getAttribute("aria-checked") === "true";
